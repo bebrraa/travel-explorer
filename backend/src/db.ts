@@ -4,7 +4,6 @@ import path from "path";
 const dbPath = path.join(process.cwd(), "data.sqlite");
 export const db = new Database(dbPath);
 
-// чуть безопаснее
 db.pragma("journal_mode = WAL");
 
 export function initDb() {
